@@ -2420,7 +2420,7 @@ void DetachAudioMixedProcessorWithUserData(AudioCallbackWithUserData process)
         rAudioProcessor *next = processor->next;
         rAudioProcessor *prev = processor->prev;
 
-        if (processor->process == process)
+        if (processor->process_with_user_data == process)
         {
             if (AUDIO.mixedProcessor == processor) AUDIO.mixedProcessor = next;
             if (prev) prev->next = next;
